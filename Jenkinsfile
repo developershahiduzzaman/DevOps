@@ -1,10 +1,13 @@
 pipeline {
     agent any
+    environment {
+        IMAGE_NAME = "devopssteps/my-app"
+    }
 
     stages {
         stage('GitHub') {
             steps {
-                echo 'Jenkins Connect To GitHub'
+                echo "${IMAGE_NAME)
             }
         }
     }
