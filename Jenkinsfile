@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('GitHub') {
             steps {
-                echo "${IMAGE_NAME)
+                echo "${IMAGE_NAME}"
             }
         }
     }
