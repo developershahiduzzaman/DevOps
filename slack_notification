@@ -11,10 +11,10 @@ pipeline {
 
     post {
         success {
-            slackSend(channel: 'C09AK2QM6M6', message: "✅ Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}")
+            slackSend(channel: 'jenkins', message: "✅ Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}")
         }
         failure {
-            slackSend(channel: 'C09AK2QM6M6', message: "❌ Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}")
+            slackSend(channel: 'jenkins', message: "❌ Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}")
         }
     }
 }
